@@ -6,7 +6,8 @@ This Chrome Extension allows Magic: The Gathering players to record who attacked
 ## Features
 - **Attack and Emotional Response Recording:** Log details about game interactions, including the attacker, the attacked, and emotional responses.
 - **Statistics Dashboard:** View statistics on the most common attackers, the most attacked players, and prevalent emotional responses.
-- **User-Friendly Interface:** Utilizes Semantic UI for a smooth, intuitive user experience.
+
+![Magic: The Gathering Attack Tracker Chrome Extension Screenshot](https://i.postimg.cc/x8kgVN2d/screenshot.jpg "Magic: The Gathering Attack Tracker")
 
 ## Prerequisites
 Before using this extension, users need to set up their own MongoDB instance. This involves creating a MongoDB database and collection to store the game data.
