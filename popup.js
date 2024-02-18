@@ -35,9 +35,9 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         var data = JSON.stringify({
-            "dataSource": "magicDBTest",
-            "database": "magicGamesTest",
-            "collection": "magicGamesTest",
+            "dataSource": "<mongo_dataSource>",
+            "database": "<mongo_database>",
+            "collection": "<mongo_collection>",
             "document": {
                 postData
             }
@@ -67,9 +67,9 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('a.item[data-tab="statsTab"]').addEventListener('click', function (e) {
 
         var data = JSON.stringify({
-            "dataSource": "magicDBTest",
-            "database": "magicGamesTest",
-            "collection": "magicGamesTest",
+            "dataSource": "<mongo_dataSource>",
+            "database": "<mongo_database>",
+            "collection": "<mongo_collection>"
         });
         fetch('<database_URL>', {
             method: 'POST',
