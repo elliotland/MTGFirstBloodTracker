@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Magic Friends",
+  "author": "<you>",
+  "version": "1.0.0",
+  "icons": {
+    "16": "resources/icon-16.ico",
+    "32": "resources/icon-32.ico",
+    "48": "resources/icon-48.ico",
+    "128": "resources/icon-128.ico"
+  },
+  "description": "An app to track first blood in Magic: The Gathering",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "resources/icon-16.ico",
+      "48": "resources/icon-48.ico",
+      "128": "resources/icon-128.ico"
+    }
+  },
+  "content_scripts": [
+    {   "matches": ["<database or other backend URL pattern>"],
+      "js": [
+        "resources/jquery-3.7.1.min.js",
+        "resources/Semantic-UI-CSS-master/semantic.min.js",
+        "popup.js"
+      ],
+      "css": [
+        "resources/Semantic-UI-CSS-master/semantic.css"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}

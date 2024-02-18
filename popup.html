@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=no" />
+  <meta name="keywords" content="Semantic-UI, Theme, Design, Template" />
+  <meta name="author" content="PPType" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Magic Friends</title>
+  <link rel="stylesheet" href="resources/Semantic-UI-CSS-master/semantic.min.css"
+    type="text/css" />
+
+  <style>
+    #root {
+      height: auto !important;
+      background-color: #dcddde;
+    }
+
+    html {
+      height: unset !important;
+    }
+
+    div.text {
+      color: #2185d0 !important;
+    }
+
+    /* .tertiary.segment {
+      height:300px;
+    } */
+
+    #attackReport span {
+      line-height: 2;
+    }
+
+    .customHidden {
+      display: none !important;
+    }
+
+    .customShow {
+      display: contents !important;
+    }
+
+    @media only screen and (max-width: 767px) {
+      .ui.container {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+    }
+  </style>
+</head>
+
+<body id="root">
+  <div class="ui container">
+    <div class="sixteen wide column">
+      <div class="ui tertiary basic segment">
+        <div class="ui raised segment">
+          <div class="ui dividing header">MTG Game Recorder</div>
+          <div class="ui fluid two item menu">
+            <a class="item" data-tab="gameTab">Record game</a>
+            <a class="item" data-tab="statsTab">See Stats</a>
+          </div>
+          <div class="ui tab " id="gameTab" data-tab="gameTab">
+            <div clas="ui basic segment" id="nameSegment">
+              <div class="ui form" id="nameForm">
+                <div class="field">
+                  <label>Enter the name of each person playing Magic</label>
+                  <input type="text" name="name" placeholder="Enter a player name">
+                </div>
+                  <button class="ui primary disabled button" type="submit" id="nameSubmitButton">Add Player</button>
+              </div>
+              <div class="ui dividing small header">Active Players</div>
+              <div id="nameList" class="ui labels" style="margin-top:1em;">
+                <div class="ui placeholder small segment" style="min-height:unset;">
+                  <p>Add Players First</p>
+                </div>
+              </div>
+                <button id="actionButton" class="ui basic primary disabled fluid  icon right labeled button" style="margin-top:1em;">Next <i class="right arrow icon"></i></button>
+              
+            </div>
+            <div class="ui basic customHidden segment" id="recordSegment">
+              <div class="ui form" id="attackReport">
+                <div class="ui field">
+                  <span>
+                    During a game,
+                    <div class="ui inline  dropdown" id="attacker">
+                      <input type="hidden" name="attacker">
+                      <div class="default text">the big meanie</div>
+                      <i class="blue dropdown icon"></i>
+                      <div class="menu">
+    
+                      </div>
+                    </div> drew first blood on
+                    <div class="ui  inline  dropdown" id="attacked">
+                      <input type="hidden" name="attacked">
+                      <div class="default text">sweet, innocent person</div>
+                      <i class="blue dropdown icon"></i>
+                      <div class="menu">
+
+                      </div>
+                    </div> and it made me feel
+                    <div class="ui inline  dropdown" id="emotionalResponse">
+                      <input type="hidden" name="emotionalResponse">
+                      <div class="default text">some type of way</div>
+                      <i class="blue dropdown icon"></i>
+                      <div class="menu">
+                        <div class="item">
+                          Happy
+                        </div>
+                        <div class="item">
+                          Sad
+                        </div>
+                        <div class="item">
+                          Frustrated
+                        </div>
+                        <div class="item">
+                          Powerful
+                        </div>
+                      </div>
+                    </div>.
+                  </span>
+                </div>
+                <div class="ui field">
+                  <button class="ui primary disabled button" id="recordSubmitButton">Submit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ui tab " id="statsTab" data-tab="statsTab">
+            <div class="ui basic segment" id="statsSegment">
+              <div class="customHidden" id="statsContainer">
+                  <div class="ui divided list" style="text-align: center;">
+                    <div class="ui item">
+                      <div class="ui tiny horizontal statistic" id="attackerStat"
+                        style="margin-top:.5em;margin-bottom:.5em;">
+                        <div class="value">
+
+                        </div>
+                        <div class="label">
+                          attacked first the most
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ui item">
+                      <div class="ui tiny horizontal statistic" id="attackedStat"
+                        style="margin-top:.5em;margin-bottom:.5em;">
+                        <div class="value">
+
+                        </div>
+                        <div class="label">
+                          was attacked first the most
+                        </div>
+                      </div>
+                    </div>
+                    <div class="ui item">
+                      <div class="ui tiny horizontal statistic" id="emotionalStat"
+                        style="margin-top:.5em;margin-bottom:.5em;">
+                        <div class="value">
+
+                        </div>
+                        <div class="label">
+                          is how we<br />generally feel
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <div class="ui basic segment" id="statCardsSegment">
+              <div class="ui cards" id="cardsContainer">
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="resources/jquery-3.7.1.min.js"></script>
+<script src="resources/Semantic-UI-CSS-master/semantic.min.js"></script>
+<script src="popup.js"></script>
+
+</html>
