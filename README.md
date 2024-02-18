@@ -41,7 +41,7 @@ Additionally, you may need to update the `manifest.json` file with specific info
 - **Viewing Statistics:** Switch to the "See Stats" tab to view aggregated data on game interactions.
 
 ## Contributing
-Contributions to the Magic: The Gathering Attack Tracker are welcome. Please feel free to submit pull requests or create issues for any bugs or new features.
+This repo will not be frequently monitored. Bugs and pull requests are welcome, as are forks to improve it yourself.
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for more details.
